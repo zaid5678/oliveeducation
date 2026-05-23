@@ -93,7 +93,7 @@ export default function Footer() {
       <div className="rule" />
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="font-sans text-[#F5F0E8]/25 text-xs">
-          © 2025 Olive Education. All rights reserved.
+          © 2026 Olive Education. All rights reserved.
         </p>
         <p className="font-sans text-[#F5F0E8]/20 text-xs">London, UK</p>
       </div>

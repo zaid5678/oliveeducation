@@ -126,7 +126,7 @@ export default function Navbar() {
         </nav>
 
         <div className="px-8 pb-10">
-          <p className="font-sans text-[#F5F0E8]/25 text-xs">© 2025 Olive Education</p>
+          <p className="font-sans text-[#F5F0E8]/25 text-xs">© 2026 Olive Education</p>
         </div>
       </div>
     </>
