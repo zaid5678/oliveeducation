@@ -1,269 +1,317 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, BookOpen, FlaskConical, ArrowRight, BookHeart, Leaf, Star } from 'lucide-react'
+import { ArrowRight, ArrowDown, BookOpen, FlaskConical } from 'lucide-react'
 import ScrollReveal from '../components/ScrollReveal'
 
 export default function Home() {
   useEffect(() => {
     document.title = 'Olive Education — Empowering Minds, Inspiring Futures'
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) meta.setAttribute('content', 'Olive Education is a London-based Islamic educational organisation offering Madrasah classes and a STEAM programme for children.')
+    document.querySelector('meta[name="description"]')
+      ?.setAttribute('content', 'Olive Education is a London-based Islamic educational organisation offering Madrasah classes every Thursday and a forthcoming STEAM programme.')
   }, [])
 
   return (
     <div className="bg-[#1C3A2A]">
-      {/* ── Hero ── */}
-      <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 noise-overlay overflow-hidden"
-        style={{
-          background: 'radial-gradient(ellipse at center, #254D38 0%, #1C3A2A 45%, #111f17 100%)',
-        }}
-      >
-        {/* Decorative rings */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[600px] h-[600px] rounded-full border border-[#C9A84C]/5 absolute" />
-          <div className="w-[800px] h-[800px] rounded-full border border-[#C9A84C]/5 absolute" />
-          <div className="w-[1000px] h-[1000px] rounded-full border border-[#C9A84C]/3 absolute" />
+
+      {/* ── Hero ──────────────────────────────────────────────────── */}
+      <section className="geo-texture min-h-screen flex flex-col justify-between pt-20">
+        <div className="flex-1 flex items-center">
+          <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 gap-x-12 items-center">
+
+              {/* Text */}
+              <div className="lg:col-span-7">
+                <p className="label mb-8 flex items-center">
+                  <span className="section-mark" />
+                  Islamic Education · London, UK
+                </p>
+
+                <h1
+                  className="display text-[3.2rem] sm:text-[4rem] md:text-[4.8rem] lg:text-[5.2rem] mb-8 max-w-2xl"
+                  style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                >
+                  Empowering Minds,<br />
+                  Inspiring&nbsp;Futures
+                </h1>
+
+                <p className="font-sans text-[#F5F0E8]/70 text-base md:text-lg leading-relaxed max-w-xl mb-10">
+                  A community-led educational organisation dedicated to nurturing the next generation through Islamic education and STEAM learning.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/madrasah"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                  >
+                    Explore Madrasah
+                    <ArrowRight size={15} />
+                  </Link>
+                  <Link
+                    to="/steam"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#C9A84C]/50 text-[#C9A84C] font-sans font-medium text-sm rounded hover:border-[#C9A84C] hover:bg-[#C9A84C]/5 transition-colors duration-200"
+                  >
+                    Discover STEAM
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-sm">
+                  <div className="aspect-square rounded overflow-hidden border border-[#C9A84C]/20">
+                    <img
+                      src="/images/logo-HD.png"
+                      alt="Olive Education"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Caption strip */}
+                  <div className="mt-3 flex items-center justify-between">
+                    <span className="font-sans text-[#F5F0E8]/40 text-xs">Est. London</span>
+                    <span className="font-sans text-[#F5F0E8]/40 text-xs">Madrasah · STEAM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto">
-          {/* Logo */}
-          <div className="mb-8">
-            <img
-              src="/images/logo.jpg"
-              alt="Olive Education"
-              className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover ring-2 ring-[#C9A84C] shadow-gold mx-auto"
-              style={{ boxShadow: '0 0 40px rgba(201,168,76,0.35), 0 0 0 4px rgba(201,168,76,0.15)' }}
-            />
-          </div>
-
-          {/* Eyebrow */}
-          <p className="font-sans uppercase tracking-[0.3em] text-[#C9A84C]/70 text-xs mb-6">
-            Islamic Education · London
+        {/* Footer strip */}
+        <div className="rule" />
+        <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-5 flex items-center justify-between">
+          <p className="font-sans text-[#F5F0E8]/35 text-xs">
+            Every Thursday · 5–7pm · Lillington Gardens, Vauxhall
           </p>
-
-          {/* H1 */}
-          <h1
-            className="font-display italic text-[#C9A84C] text-5xl sm:text-6xl md:text-7xl leading-tight mb-6"
-            style={{ fontFamily: '"Cormorant Garamond", serif' }}
+          <button
+            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+            className="flex items-center gap-2 text-[#F5F0E8]/40 hover:text-[#C9A84C] transition-colors duration-200 scroll-indicator"
+            aria-label="Scroll down"
           >
-            Empowering Minds,<br />
-            <span className="shimmer-text">Inspiring Futures</span>
-          </h1>
-
-          {/* Subtext */}
-          <p className="font-sans text-[#F5F0E8]/80 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-            A community-led educational organisation dedicated to nurturing the next generation through Islamic education and STEAM learning.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <Link
-              to="/madrasah"
-              className="px-8 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold rounded-full hover:bg-[#E8C96A] transition-all duration-200 hover:shadow-gold text-sm"
-            >
-              Explore Madrasah
-            </Link>
-            <Link
-              to="/steam"
-              className="px-8 py-3.5 border border-[#C9A84C] text-[#C9A84C] font-sans font-semibold rounded-full hover:bg-[#C9A84C] hover:text-[#1C3A2A] transition-all duration-200 text-sm"
-            >
-              Discover STEAM
-            </Link>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <span className="text-[#F5F0E8]/40 font-sans text-xs uppercase tracking-widest">Scroll</span>
-          <ChevronDown size={20} className="text-[#C9A84C]/60 bounce-chevron" />
+            <ArrowDown size={16} />
+          </button>
         </div>
       </section>
 
-      {/* ── What We Offer ── */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* ── What We Offer ─────────────────────────────────────────── */}
+      <section className="bg-[#111f17] py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
           <ScrollReveal>
-            <p className="font-sans uppercase tracking-[0.3em] text-[#C9A84C] text-xs text-center mb-3">
-              What We Offer
-            </p>
-            <h2
-              className="font-display italic text-[#C9A84C] text-4xl md:text-5xl text-center mb-16"
-              style={{ fontFamily: '"Cormorant Garamond", serif' }}
-            >
-              Two Pillars of Learning
-            </h2>
+            <div className="flex items-center justify-between mb-14 flex-wrap gap-6">
+              <div>
+                <p className="label mb-4 flex items-center">
+                  <span className="section-mark" />
+                  What We Offer
+                </p>
+                <h2
+                  className="display text-4xl sm:text-5xl"
+                  style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                >
+                  Two Pillars of Learning
+                </h2>
+              </div>
+              <Link
+                to="/about"
+                className="font-sans text-[#C9A84C] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 self-end"
+              >
+                About us <ArrowRight size={14} />
+              </Link>
+            </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Madrasah Card */}
-            <ScrollReveal delay={100}>
-              <Link
-                to="/madrasah"
-                className="block h-full group bg-[#254D38] rounded-2xl p-8 md:p-10 hover:scale-[1.02] transition-transform duration-300 border border-[#C9A84C]/10 hover:border-[#C9A84C]/30"
-              >
-                <div className="w-14 h-14 rounded-full bg-[#C9A84C]/10 flex items-center justify-center mb-6">
-                  <BookOpen size={26} className="text-[#C9A84C]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#C9A84C]/15">
+
+            {/* Madrasah */}
+            <ScrollReveal>
+              <Link to="/madrasah" className="group block bg-[#111f17] p-10 md:p-12 hover:bg-[#1a2d22] transition-colors duration-200 h-full">
+                <div className="flex items-start justify-between mb-8">
+                  <BookOpen size={22} className="text-[#C9A84C] mt-1" />
+                  <span className="font-sans text-[#D4E84A] text-xs font-semibold px-3 py-1 border border-[#D4E84A]/40 rounded-sm">
+                    Thursday · 5–7pm
+                  </span>
                 </div>
                 <h3
-                  className="font-display italic text-[#C9A84C] text-2xl md:text-3xl mb-4"
+                  className="display text-2xl sm:text-3xl mb-5"
                   style={{ fontFamily: '"Cormorant Garamond", serif' }}
                 >
-                  Olive Education Madrasah
+                  Olive Education<br />Madrasah
                 </h3>
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed mb-6 text-sm md:text-base">
+                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8">
                   A safe and nurturing space where children learn Qaa'idah, Qur'an, Islamic Studies, Seerah and more — every Thursday during term time.
                 </p>
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-1.5 bg-[#D4E84A] text-[#1C3A2A] rounded-full font-sans font-semibold text-xs">
-                    Every Thursday · 5–7pm
-                  </span>
-                </div>
-                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight size={16} />
+                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                  Learn more <ArrowRight size={14} />
                 </span>
               </Link>
             </ScrollReveal>
 
-            {/* STEAM Card */}
-            <ScrollReveal delay={200}>
-              <Link
-                to="/steam"
-                className="block h-full group bg-[#254D38] rounded-2xl p-8 md:p-10 hover:scale-[1.02] transition-transform duration-300 border border-[#C9A84C]/10 hover:border-[#C9A84C]/30"
-              >
-                <div className="w-14 h-14 rounded-full bg-[#C9A84C]/10 flex items-center justify-center mb-6">
-                  <FlaskConical size={26} className="text-[#C9A84C]" />
+            {/* STEAM */}
+            <ScrollReveal delay={100}>
+              <Link to="/steam" className="group block bg-[#111f17] p-10 md:p-12 hover:bg-[#1a2d22] transition-colors duration-200 h-full">
+                <div className="flex items-start justify-between mb-8">
+                  <FlaskConical size={22} className="text-[#C9A84C] mt-1" />
+                  <span className="font-sans text-[#C9A84C] text-xs font-semibold px-3 py-1 border border-[#C9A84C]/30 rounded-sm">
+                    Launching soon
+                  </span>
                 </div>
                 <h3
-                  className="font-display italic text-[#C9A84C] text-2xl md:text-3xl mb-4"
+                  className="display text-2xl sm:text-3xl mb-5"
                   style={{ fontFamily: '"Cormorant Garamond", serif' }}
                 >
-                  STEAM Programme
+                  STEAM<br />Programme
                 </h3>
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed mb-6 text-sm md:text-base">
+                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8">
                   Our upcoming Science, Technology, Engineering, Arts & Maths programme — designed to inspire curiosity and build future skills in young minds.
                 </p>
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-1.5 bg-[#C9A84C]/15 text-[#C9A84C] border border-[#C9A84C]/30 rounded-full font-sans font-semibold text-xs">
-                    Launching Soon
-                  </span>
-                </div>
-                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Find Out More <ArrowRight size={16} />
+                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                  Find out more <ArrowRight size={14} />
                 </span>
               </Link>
             </ScrollReveal>
+
           </div>
         </div>
       </section>
 
-      {/* ── About Snippet ── */}
-      <section className="py-24 px-4 bg-[#111f17]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <ScrollReveal>
-              <div>
-                <p className="font-sans uppercase tracking-[0.3em] text-[#C9A84C] text-xs mb-6">
-                  Who We Are
+      {/* ── Community ─────────────────────────────────────────────── */}
+      <section className="py-24 bg-[#1C3A2A]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 gap-x-16">
+
+            <ScrollReveal className="lg:col-span-5">
+              <p className="label mb-6 flex items-center">
+                <span className="section-mark" />
+                Who We Are
+              </p>
+              <blockquote
+                className="display text-3xl sm:text-4xl md:text-5xl mb-8 leading-tight"
+                style={{ fontFamily: '"Cormorant Garamond", serif' }}
+              >
+                "Run by the community, for the community."
+              </blockquote>
+              <Link
+                to="/about"
+                className="font-sans text-[#C9A84C] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+              >
+                Our story <ArrowRight size={14} />
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200} className="lg:col-span-7">
+              <div className="space-y-6 pt-2 lg:pt-14">
+                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                  Olive Education was founded on a deep belief that every child deserves access to quality Islamic education in a welcoming, community-driven environment. We work closely with families to ensure our lessons are engaging, age-appropriate, and rooted in strong Islamic values.
                 </p>
-                <blockquote
-                  className="font-display italic text-[#C9A84C] text-4xl md:text-5xl lg:text-6xl leading-tight mb-4"
+                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                  Our teachers are qualified, passionate, and dedicated to every child's growth. Whether your child is just beginning their Qur'anic journey or building on existing knowledge, Olive Education is a place where they can thrive.
+                </p>
+                <div className="rule-strong mt-8 pt-8">
+                  <div className="grid grid-cols-3 gap-6 pt-8">
+                    {[
+                      { label: "Qur'an & Islamic Studies", note: "Taught weekly" },
+                      { label: "Community-led", note: "Locally run" },
+                      { label: "Qualified teachers", note: "Every class" },
+                    ].map((s) => (
+                      <div key={s.label}>
+                        <p className="font-sans text-[#C9A84C] font-medium text-sm mb-1">{s.label}</p>
+                        <p className="font-sans text-[#F5F0E8]/40 text-xs">{s.note}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Poster Banner ─────────────────────────────────────────── */}
+      <section className="bg-[#111f17]">
+        <div className="rule" />
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+          <ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7">
+                <p className="label mb-5 flex items-center">
+                  <span className="section-mark" />
+                  Information
+                </p>
+                <h2
+                  className="display text-3xl sm:text-4xl mb-5"
                   style={{ fontFamily: '"Cormorant Garamond", serif' }}
                 >
-                  "Run by the community, for the community."
-                </blockquote>
+                  Download Our Madrasah Poster
+                </h2>
+                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8 max-w-lg">
+                  Share it with family, friends, and your local mosque community. Madrasah runs every Thursday from 5–7pm at Lillington Gardens Community Hall, Vauxhall.
+                </p>
                 <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 font-sans text-[#C9A84C] text-sm font-medium hover:gap-3 transition-all mt-6"
+                  to="/madrasah"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
                 >
-                  About Us <ArrowRight size={16} />
+                  View Full Details
+                  <ArrowRight size={15} />
                 </Link>
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={200}>
-              <div className="space-y-5">
-                <p className="font-sans text-[#F5F0E8]/80 leading-relaxed">
-                  Olive Education was founded on a deep belief that every child deserves access to quality Islamic education in a welcoming, community-driven environment.
-                </p>
-                <p className="font-sans text-[#F5F0E8]/80 leading-relaxed">
-                  We work closely with families to ensure our lessons are engaging, age-appropriate, and rooted in strong Islamic values. Our teachers are qualified, passionate, and dedicated to every child's growth.
-                </p>
-                <p className="font-sans text-[#F5F0E8]/80 leading-relaxed">
-                  Whether your child is just beginning their Qur'anic journey or building on existing knowledge, Olive Education provides a nurturing space where they can thrive.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Values Strip ── */}
-      <section className="py-20 px-4 bg-[#1C3A2A]">
-        <div className="max-w-7xl mx-auto">
-          <div className="gold-divider mb-16" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {[
-              { icon: <BookHeart size={32} className="text-[#C9A84C]" />, label: 'Qur\'an & Islamic Studies', desc: 'Comprehensive curriculum from Qaa\'idah through to Qur\'an, Du\'aas, Seerah and Islamic Studies.' },
-              { icon: <Leaf size={32} className="text-[#C9A84C]" />, label: 'Community Focused', desc: 'Built by local families for local families — we foster a sense of belonging and shared purpose.' },
-              { icon: <Star size={32} className="text-[#C9A84C]" />, label: 'Qualified Teachers', desc: 'Our teachers are experienced, compassionate, and committed to every child\'s development.' },
-            ].map((item, i) => (
-              <ScrollReveal key={item.label} delay={i * 100}>
-                <div className="flex flex-col items-center gap-4 p-8">
-                  <div className="w-16 h-16 rounded-full bg-[#254D38] flex items-center justify-center">
-                    {item.icon}
-                  </div>
-                  <h3
-                    className="font-display italic text-[#C9A84C] text-xl"
-                    style={{ fontFamily: '"Cormorant Garamond", serif' }}
-                  >
-                    {item.label}
-                  </h3>
-                  <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed">{item.desc}</p>
+              <div className="lg:col-span-5">
+                <div className="border border-[#C9A84C]/20 rounded overflow-hidden">
+                  <img
+                    src="/images/poster.jpeg"
+                    alt="Olive Education Madrasah information poster"
+                    className="w-full h-auto"
+                  />
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
-          <div className="gold-divider mt-16" />
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
+        <div className="rule" />
       </section>
 
-      {/* ── CTA Banner ── */}
-      <section className="py-24 px-4 bg-[#254D38]">
-        <div className="max-w-2xl mx-auto text-center">
+      {/* ── CTA ───────────────────────────────────────────────────── */}
+      <section className="geo-texture py-24 bg-[#1C3A2A]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <ScrollReveal>
-            <p className="font-sans uppercase tracking-[0.3em] text-[#C9A84C] text-xs mb-4">
-              Join Us
-            </p>
-            <h2
-              className="font-display italic text-[#C9A84C] text-4xl md:text-5xl mb-5"
-              style={{ fontFamily: '"Cormorant Garamond", serif' }}
-            >
-              Ready to join our community?
-            </h2>
-            <p className="font-sans text-[#F5F0E8]/75 mb-2 leading-relaxed">
-              Madrasah runs every Thursday 5–7pm during term time at Lillington Gardens Community Hall.
-            </p>
-            <p className="font-sans text-[#F5F0E8]/60 text-sm mb-10">
-              Contact us at <a href="tel:+447723383465" className="text-[#C9A84C] hover:underline">+44 7723 383 465</a> or <a href="mailto:oliveeducation@mail.com" className="text-[#C9A84C] hover:underline">oliveeducation@mail.com</a>
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold rounded-full hover:bg-[#E8C96A] transition-colors text-sm"
+            <div className="max-w-2xl">
+              <p className="label mb-6 flex items-center">
+                <span className="section-mark" />
+                Join Us
+              </p>
+              <h2
+                className="display text-4xl sm:text-5xl md:text-6xl mb-6"
+                style={{ fontFamily: '"Cormorant Garamond", serif' }}
               >
-                Register Now
-              </Link>
-              <Link
-                to="/madrasah"
-                className="px-8 py-3.5 border border-[#C9A84C]/60 text-[#C9A84C] font-sans font-semibold rounded-full hover:border-[#C9A84C] transition-colors text-sm"
-              >
-                View Schedule
-              </Link>
+                Ready to join our community?
+              </h2>
+              <p className="font-sans text-[#F5F0E8]/65 text-base leading-relaxed mb-3">
+                Madrasah runs every Thursday, 5–7pm, during term time. Contact us to register your child.
+              </p>
+              <p className="font-sans text-sm mb-10">
+                <a href="tel:+447723383465" className="text-[#C9A84C] hover:underline">+44 7723 383 465</a>
+                <span className="text-[#F5F0E8]/30 mx-3">·</span>
+                <a href="mailto:oliveeducation@mail.com" className="text-[#C9A84C] hover:underline">oliveeducation@mail.com</a>
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                >
+                  Register Now
+                  <ArrowRight size={15} />
+                </Link>
+                <Link
+                  to="/madrasah"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#C9A84C]/50 text-[#C9A84C] font-sans font-medium text-sm rounded hover:border-[#C9A84C] transition-colors duration-200"
+                >
+                  View Schedule
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
     </div>
   )
 }

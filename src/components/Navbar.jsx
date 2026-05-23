@@ -12,25 +12,14 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   const menuRef = useRef(null)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  useEffect(() => {
-    setOpen(false)
-  }, [location.pathname])
+  useEffect(() => { setOpen(false) }, [location.pathname])
 
   useEffect(() => {
     const handler = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setOpen(false)
-      }
+      if (menuRef.current && !menuRef.current.contains(e.target)) setOpen(false)
     }
     if (open) document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
@@ -41,34 +30,25 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  const isActive = (to) => {
-    if (to === '/') return location.pathname === '/'
-    return location.pathname.startsWith(to)
-  }
+  const isActive = (to) => to === '/' ? location.pathname === '/' : location.pathname.startsWith(to)
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-[#1C3A2A]/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.3)]'
-            : 'bg-[#1C3A2A]/95 backdrop-blur-md'
-        } border-b border-[#C9A84C]/20`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#1C3A2A]/96 backdrop-blur-sm border-b border-[#C9A84C]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
+
+            {/* Brand */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
-                src="/images/logo.jpg"
-                alt="Olive Education Logo"
-                className="h-10 w-10 rounded-full object-cover ring-2 ring-[#C9A84C]/60 group-hover:ring-[#C9A84C] transition-all duration-300"
+                src="/images/logo-HD.png"
+                alt="Olive Education"
+                className="h-9 w-9 rounded object-cover"
               />
               <span
-                className="font-display text-[#C9A84C] font-semibold tracking-wide text-lg leading-tight hidden sm:block"
-                style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em] hidden sm:block"
               >
-                OLIVE EDUCATION
+                Olive Education
               </span>
             </Link>
 
@@ -78,77 +58,75 @@ export default function Navbar() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`relative px-4 py-2 font-sans text-sm font-medium transition-colors duration-200 group ${
+                  className={`px-4 py-2 font-sans text-sm transition-colors duration-200 ${
                     isActive(link.to)
                       ? 'text-[#C9A84C]'
-                      : 'text-[#F5F0E8] hover:text-[#C9A84C]'
+                      : 'text-[#F5F0E8]/60 hover:text-[#F5F0E8]'
                   }`}
                 >
                   {link.label}
-                  <span
-                    className={`absolute bottom-0 left-4 right-4 h-px bg-[#C9A84C] transition-transform duration-300 origin-left ${
-                      isActive(link.to) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                    }`}
-                  />
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="ml-4 px-5 py-2 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded-full hover:bg-[#E8C96A] transition-colors duration-200"
+                className="ml-4 px-5 py-2 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-xs rounded uppercase tracking-wider hover:bg-[#E8C96A] transition-colors duration-200"
               >
                 Enrol Now
               </Link>
             </nav>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile trigger */}
             <button
               onClick={() => setOpen(!open)}
-              className="md:hidden p-2 text-[#F5F0E8] hover:text-[#C9A84C] transition-colors"
+              className="md:hidden p-2 text-[#F5F0E8]/70 hover:text-[#F5F0E8] transition-colors"
               aria-label="Toggle menu"
             >
-              {open ? <X size={24} /> : <Menu size={24} />}
+              {open ? <X size={22} /> : <Menu size={22} />}
             </button>
+
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <div
         ref={menuRef}
-        className={`fixed inset-0 z-40 bg-[#1C3A2A] flex flex-col transition-all duration-500 ${
+        className={`fixed inset-0 z-40 bg-[#1C3A2A] flex flex-col pt-20 transition-all duration-300 ${
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ paddingTop: '4rem' }}
       >
-        <div className="flex flex-col items-center justify-center flex-1 gap-2 px-8">
+        <div className="rule" />
+        <nav className="flex-1 flex flex-col px-8 py-10">
           {navLinks.map((link, i) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`block w-full text-center py-4 font-display italic text-5xl transition-all duration-300 ${
-                isActive(link.to)
-                  ? 'text-[#C9A84C]'
-                  : 'text-[#F5F0E8]/80 hover:text-[#C9A84C]'
-              }`}
-              style={{
-                transitionDelay: open ? `${i * 60}ms` : '0ms',
-                transform: open ? 'translateY(0)' : 'translateY(20px)',
-                opacity: open ? 1 : 0,
-              }}
-            >
-              {link.label}
-            </Link>
+            <div key={link.to}>
+              <Link
+                to={link.to}
+                className={`block py-5 italic text-4xl sm:text-5xl transition-all duration-300 ${
+                  open ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                } ${isActive(link.to) ? 'text-[#C9A84C]' : 'text-[#F5F0E8]/70 hover:text-[#C9A84C]'}`}
+                style={{
+                  fontFamily: '"Cormorant Garamond", serif',
+                  transitionDelay: open ? `${i * 50}ms` : '0ms',
+                }}
+              >
+                {link.label}
+              </Link>
+              <div className="rule" />
+            </div>
           ))}
-          <div className="gold-divider w-full my-6" />
-          <Link
-            to="/contact"
-            className="px-10 py-3 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-base rounded-full hover:bg-[#E8C96A] transition-colors"
-          >
-            Enrol Now
-          </Link>
-        </div>
-        <div className="py-8 text-center text-[#F5F0E8]/40 font-sans text-sm">
-          © 2025 Olive Education
+
+          <div className="mt-10">
+            <Link
+              to="/contact"
+              className="inline-block px-8 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+            >
+              Enrol Now
+            </Link>
+          </div>
+        </nav>
+
+        <div className="px-8 pb-10">
+          <p className="font-sans text-[#F5F0E8]/25 text-xs">© 2025 Olive Education</p>
         </div>
       </div>
     </>
