@@ -23,7 +23,7 @@ export default function Home() {
               <div className="lg:col-span-7">
                 <p className="label mb-8 flex items-center">
                   <span className="section-mark" />
-                  Islamic Education · London, UK
+                  Islamic Education · Pimlico, London
                 </p>
 
                 <h1
@@ -57,12 +57,12 @@ export default function Home() {
 
               {/* Image */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-sm">
+                <div className="relative w-full max-w-lg">
                   <div className="aspect-square rounded overflow-hidden border border-[#C9A84C]/20 bg-white">
                     <img
                       src="/images/logo-HD.png"
                       alt="Olive Education"
-                      className="w-full h-full object-contain p-4"
+                      className="w-full h-full object-contain p-2"
                     />
                   </div>
                   {/* Caption strip */}
@@ -78,10 +78,7 @@ export default function Home() {
 
         {/* Footer strip */}
         <div className="rule" />
-        <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-5 flex items-center justify-between">
-          <p className="font-sans text-[#F5F0E8]/35 text-xs">
-            Every Thursday · 5–7pm · Lillington Gardens, Community Hall, Vauxhall
-          </p>
+        <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-5 flex items-center justify-end">
           <button
             onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             className="flex items-center gap-2 text-[#F5F0E8]/40 hover:text-[#C9A84C] transition-colors duration-200 scroll-indicator"
@@ -242,7 +239,7 @@ export default function Home() {
                 Ready to join our community?
               </h2>
               <p className="font-sans text-[#F5F0E8]/65 text-base leading-relaxed mb-3">
-                Madrasah runs every Thursday, 5–7pm, during term time. Contact us to register your child.
+                Madrasah runs every Thursday, 5–7pm, during term time. Based in <span className="text-[#F5F0E8]/90">Pimlico, London</span> — contact us to register your child.
               </p>
               <p className="font-sans text-sm mb-10">
                 <a href="tel:+447723383465" className="text-[#C9A84C] hover:underline">+44 7723 383 465</a>
