@@ -58,11 +58,11 @@ export default function Home() {
               {/* Image */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-lg">
-                  <div className="aspect-square rounded overflow-hidden border border-[#C9A84C]/20 bg-white">
+                  <div className="aspect-square rounded overflow-hidden">
                     <img
                       src="/images/logo-HD.png"
                       alt="Olive Education"
-                      className="w-full h-full object-contain p-2"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   {/* Caption strip */}

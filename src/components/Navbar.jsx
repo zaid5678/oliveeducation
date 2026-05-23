@@ -43,7 +43,7 @@ export default function Navbar() {
               <img
                 src="/images/logo-HD.png"
                 alt="Olive Education"
-                className="h-9 w-9 rounded object-contain bg-white p-0.5"
+                className="h-9 w-9 rounded object-contain"
               />
               <span
                 className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em] hidden sm:block"
