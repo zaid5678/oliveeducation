@@ -22,7 +22,7 @@ export default function Footer() {
               <img
                 src="/images/logo-HD.png"
                 alt="Olive Education"
-                className="h-10 w-10 rounded object-contain bg-white p-0.5"
+                className="h-10 w-10 rounded object-contain"
               />
               <span className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em]">
                 Olive Education
