@@ -40,7 +40,7 @@ export default function Madrasah() {
             {[
               { icon: <Calendar size={16} />, label: 'When', value: 'Every Thursday (Term Time)' },
               { icon: <Clock size={16} />, label: 'Time', value: '5:00pm – 7:00pm' },
-              { icon: <MapPin size={16} />, label: 'Location', value: 'Lillington Gardens Community Hall, Vauxhall Bridge Road, London SW1V 2LF' },
+              { icon: <MapPin size={16} />, label: 'Location', value: 'Lillington Gardens, Community Hall, Vauxhall Bridge Road, London, SW1V 2LF' },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-3 md:px-8 first:pl-0">
                 <span className="text-[#1C3A2A] mt-0.5 flex-shrink-0">{item.icon}</span>
@@ -180,7 +180,7 @@ export default function Madrasah() {
                 Download and share our poster with your local mosque, school, or community group. Every referral helps our community grow.
               </p>
               <p className="font-sans text-[#F5F0E8]/40 text-xs">
-                Madrasah · Every Thursday · 5–7pm · Lillington Gardens
+                Madrasah · Every Thursday · 5–7pm · Lillington Gardens, Community Hall
               </p>
             </ScrollReveal>
 

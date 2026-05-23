@@ -58,11 +58,11 @@ export default function Home() {
               {/* Image */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-sm">
-                  <div className="aspect-square rounded overflow-hidden border border-[#C9A84C]/20">
+                  <div className="aspect-square rounded overflow-hidden border border-[#C9A84C]/20 bg-white">
                     <img
                       src="/images/logo-HD.png"
                       alt="Olive Education"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
                   {/* Caption strip */}
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="rule" />
         <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-5 flex items-center justify-between">
           <p className="font-sans text-[#F5F0E8]/35 text-xs">
-            Every Thursday · 5–7pm · Lillington Gardens, Vauxhall
+            Every Thursday · 5–7pm · Lillington Gardens, Community Hall, Vauxhall
           </p>
           <button
             onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
@@ -224,49 +224,6 @@ export default function Home() {
 
           </div>
         </div>
-      </section>
-
-      {/* ── Poster Banner ─────────────────────────────────────────── */}
-      <section className="bg-[#111f17]">
-        <div className="rule" />
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-          <ScrollReveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7">
-                <p className="label mb-5 flex items-center">
-                  <span className="section-mark" />
-                  Information
-                </p>
-                <h2
-                  className="display text-3xl sm:text-4xl mb-5"
-                  style={{ fontFamily: '"Cormorant Garamond", serif' }}
-                >
-                  Download Our Madrasah Poster
-                </h2>
-                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8 max-w-lg">
-                  Share it with family, friends, and your local mosque community. Madrasah runs every Thursday from 5–7pm at Lillington Gardens Community Hall, Vauxhall.
-                </p>
-                <Link
-                  to="/madrasah"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
-                >
-                  View Full Details
-                  <ArrowRight size={15} />
-                </Link>
-              </div>
-              <div className="lg:col-span-5">
-                <div className="border border-[#C9A84C]/20 rounded overflow-hidden">
-                  <img
-                    src="/images/poster.jpeg"
-                    alt="Olive Education Madrasah information poster"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-        <div className="rule" />
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────────── */}

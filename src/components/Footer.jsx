@@ -22,7 +22,7 @@ export default function Footer() {
               <img
                 src="/images/logo-HD.png"
                 alt="Olive Education"
-                className="h-10 w-10 rounded object-cover"
+                className="h-10 w-10 rounded object-contain bg-white p-0.5"
               />
               <span className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em]">
                 Olive Education
@@ -82,7 +82,7 @@ export default function Footer() {
               ))}
               <li className="flex items-start gap-3 text-[#F5F0E8]/35 font-sans text-xs pt-1 leading-relaxed">
                 <MapPin size={13} className="text-[#C9A84C]/40 flex-shrink-0 mt-0.5" />
-                Lillington Gardens Community Hall,<br />Vauxhall Bridge Road, London SW1V 2LF
+                Lillington Gardens, Community Hall,<br />Vauxhall Bridge Road, London, SW1V 2LF
               </li>
             </ul>
           </div>

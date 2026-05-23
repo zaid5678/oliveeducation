@@ -43,7 +43,7 @@ export default function Navbar() {
               <img
                 src="/images/logo-HD.png"
                 alt="Olive Education"
-                className="h-9 w-9 rounded object-cover"
+                className="h-9 w-9 rounded object-contain bg-white p-0.5"
               />
               <span
                 className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em] hidden sm:block"
@@ -71,7 +71,7 @@ export default function Navbar() {
                 to="/contact"
                 className="ml-4 px-5 py-2 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-xs rounded uppercase tracking-wider hover:bg-[#E8C96A] transition-colors duration-200"
               >
-                Enrol Now
+                Contact
               </Link>
             </nav>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
               to="/contact"
               className="inline-block px-8 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
             >
-              Enrol Now
+              Contact
             </Link>
           </div>
         </nav>
