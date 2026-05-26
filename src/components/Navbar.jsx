@@ -7,7 +7,6 @@ const navLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Madrasah', to: '/madrasah' },
   { label: 'STEAM', to: '/steam' },
-  { label: 'Contact', to: '/contact' },
 ]
 
 export default function Navbar() {
