@@ -37,7 +37,7 @@ export default function Home() {
                 </h1>
 
                 <p className="font-sans text-[#1a1a18]/65 text-base md:text-lg leading-relaxed max-w-xl mb-10">
-                  A community-led educational organisation dedicated to nurturing the next generation through Islamic education and Science, Technology, Engineering, Arts and Maths learning.
+                  A community-led educational organisation dedicated to nurturing the next generation through our two pillars of learning — Islamic education and Science, Technology, Engineering, Arts and Maths.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">
@@ -124,7 +124,7 @@ export default function Home() {
               <Link to="/madrasah" className="group block bg-[#EBE5D9] p-10 md:p-12 hover:bg-[#E2DAC9] transition-colors duration-200 h-full">
                 <div className="flex items-start justify-between mb-8">
                   <BookOpen size={22} className="text-[#1C3A2A] mt-1" />
-                  <span className="font-sans text-[#1C3A2A] text-xs font-semibold px-3 py-1 border border-[#1C3A2A]/30 rounded-sm bg-[#D4E84A]">
+                  <span className="font-sans text-[#1C3A2A] text-xs font-semibold px-3 py-1 border border-[#C9A84C]/60 rounded-sm bg-[#C9A84C]">
                     Thursday · 5–7pm
                   </span>
                 </div>

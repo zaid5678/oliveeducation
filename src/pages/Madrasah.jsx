@@ -34,7 +34,7 @@ export default function Madrasah() {
       </section>
 
       {/* ── Key Info Banner ───────────────────────────────────────── */}
-      <section className="bg-[#D4E84A]">
+      <section className="bg-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-7">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:divide-x md:divide-[#1C3A2A]/15">
             {[
