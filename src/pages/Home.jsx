@@ -31,11 +31,13 @@ export default function Home() {
                   style={{ fontFamily: '"Cormorant Garamond", serif' }}
                 >
                   Empowering Minds,<br />
-                  Inspiring&nbsp;Futures
+                  <span
+                    className="underline underline-offset-[6px] decoration-[#C9A84C] decoration-[1.5px]"
+                  >Inspiring&nbsp;Futures</span>
                 </h1>
 
                 <p className="font-sans text-[#1a1a18]/65 text-base md:text-lg leading-relaxed max-w-xl mb-10">
-                  A community-led educational organisation dedicated to nurturing the next generation through Islamic education and STEAM learning.
+                  A community-led educational organisation dedicated to nurturing the next generation through Islamic education and Science, Technology, Engineering, Arts and Maths learning.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">
