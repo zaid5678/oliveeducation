@@ -11,10 +11,10 @@ export default function Madrasah() {
   }, [])
 
   return (
-    <div className="bg-[#1C3A2A]">
+    <div className="bg-[#F5F0E8]">
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
-      <section className="geo-texture pt-32 pb-20 bg-[#1C3A2A]">
+      <section className="geo-texture pt-32 pb-20 bg-[#F5F0E8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <p className="label mb-7 flex items-center">
             <span className="section-mark" />
@@ -26,7 +26,7 @@ export default function Madrasah() {
           >
             Olive Education Madrasah
           </h1>
-          <p className="font-sans text-[#F5F0E8]/65 text-lg max-w-xl leading-relaxed">
+          <p className="font-sans text-[#1a1a18]/60 text-lg max-w-xl leading-relaxed">
             Empowering young Muslims through knowledge, faith and community.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Madrasah() {
       </section>
 
       {/* ── Curriculum ────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#111f17]">
+      <section className="py-24 bg-[#EBE5D9]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
           <ScrollReveal>
@@ -97,7 +97,7 @@ export default function Madrasah() {
                 <div className="rule" />
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8">
                   <div className="md:col-span-1">
-                    <span className="font-sans text-[#C9A84C]/40 text-xs font-medium">{item.n}</span>
+                    <span className="font-sans text-[#1C3A2A]/35 text-xs font-medium">{item.n}</span>
                   </div>
                   <div className="md:col-span-4">
                     <h3
@@ -108,7 +108,7 @@ export default function Madrasah() {
                     </h3>
                   </div>
                   <div className="md:col-span-7">
-                    <p className="font-sans text-[#F5F0E8]/65 leading-relaxed text-sm md:text-base">
+                    <p className="font-sans text-[#1a1a18]/60 leading-relaxed text-sm md:text-base">
                       {item.body}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export default function Madrasah() {
       </section>
 
       {/* ── What We Provide ───────────────────────────────────────── */}
-      <section className="py-24 bg-[#1C3A2A]">
+      <section className="py-24 bg-[#F5F0E8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 gap-x-16">
 
@@ -140,7 +140,7 @@ export default function Madrasah() {
             </ScrollReveal>
 
             <ScrollReveal delay={100} className="lg:col-span-8">
-              <ul className="space-y-4">
+              <ul className="space-y-0">
                 {[
                   'Qualified Teachers',
                   'Interactive and Engaging Lessons',
@@ -148,9 +148,9 @@ export default function Madrasah() {
                   'Trips and Special Events',
                   'Opportunities to Mentor',
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-4 py-4 border-b border-[#C9A84C]/12">
-                    <CheckCircle2 size={16} className="text-[#C9A84C] flex-shrink-0" />
-                    <span className="font-sans text-[#F5F0E8]/80 font-medium text-sm md:text-base">{item}</span>
+                  <li key={item} className="flex items-center gap-4 py-4 border-b border-[#1C3A2A]/10">
+                    <CheckCircle2 size={16} className="text-[#1C3A2A]/50 flex-shrink-0" />
+                    <span className="font-sans text-[#1a1a18]/75 font-medium text-sm md:text-base">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -161,7 +161,7 @@ export default function Madrasah() {
       </section>
 
       {/* ── Poster ────────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#111f17]">
+      <section className="py-24 bg-[#EBE5D9]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -176,16 +176,16 @@ export default function Madrasah() {
               >
                 Spread the Word
               </h2>
-              <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8">
+              <p className="font-sans text-[#1a1a18]/60 text-sm leading-relaxed mb-8">
                 Download and share our poster with your local mosque, school, or community group. Every referral helps our community grow.
               </p>
-              <p className="font-sans text-[#F5F0E8]/40 text-xs">
+              <p className="font-sans text-[#1a1a18]/35 text-xs">
                 Madrasah · Every Thursday · 5–7pm · Lillington Gardens, Community Hall
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={100} className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2">
-              <div className="border border-[#C9A84C]/20 rounded overflow-hidden">
+              <div className="border border-[#1C3A2A]/15 rounded overflow-hidden">
                 <img
                   src="/images/poster.jpeg"
                   alt="Olive Education Madrasah information poster"
@@ -199,7 +199,7 @@ export default function Madrasah() {
       </section>
 
       {/* ── Registration CTA ──────────────────────────────────────── */}
-      <section className="geo-texture py-20 bg-[#1C3A2A]">
+      <section className="geo-texture py-20 bg-[#F5F0E8]">
         <div className="rule" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
           <ScrollReveal>
@@ -215,20 +215,20 @@ export default function Madrasah() {
                 >
                   Ready to Enrol?
                 </h2>
-                <p className="font-sans text-[#F5F0E8]/60 text-sm leading-relaxed max-w-md">
+                <p className="font-sans text-[#1a1a18]/55 text-sm leading-relaxed max-w-md">
                   Contact us to register your child or find out more. We welcome children of all levels and backgrounds.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#1C3A2A] text-[#F5F0E8] font-sans font-semibold text-sm rounded hover:bg-[#254D38] transition-colors duration-200"
                 >
                   Get in Touch <ArrowRight size={15} />
                 </Link>
                 <a
                   href="tel:+447723383465"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 border border-[#C9A84C]/50 text-[#C9A84C] font-sans font-medium text-sm rounded hover:border-[#C9A84C] transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 border border-[#1C3A2A]/35 text-[#1C3A2A] font-sans font-medium text-sm rounded hover:border-[#1C3A2A] transition-colors duration-200"
                 >
                   <Phone size={14} />
                   Call Us

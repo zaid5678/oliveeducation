@@ -11,10 +11,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-[#1C3A2A]">
+    <div className="bg-[#F5F0E8]">
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
-      <section className="geo-texture min-h-screen flex flex-col justify-between pt-20">
+      <section className="geo-texture min-h-screen flex flex-col justify-between pt-20 bg-[#F5F0E8]">
         <div className="flex-1 flex items-center">
           <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 gap-x-12 items-center">
@@ -34,21 +34,21 @@ export default function Home() {
                   Inspiring&nbsp;Futures
                 </h1>
 
-                <p className="font-sans text-[#F5F0E8]/70 text-base md:text-lg leading-relaxed max-w-xl mb-10">
+                <p className="font-sans text-[#1a1a18]/65 text-base md:text-lg leading-relaxed max-w-xl mb-10">
                   A community-led educational organisation dedicated to nurturing the next generation through Islamic education and STEAM learning.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">
                   <Link
                     to="/madrasah"
-                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#1C3A2A] text-[#F5F0E8] font-sans font-semibold text-sm rounded hover:bg-[#254D38] transition-colors duration-200"
                   >
                     Explore Madrasah
                     <ArrowRight size={15} />
                   </Link>
                   <Link
                     to="/steam"
-                    className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#C9A84C]/50 text-[#C9A84C] font-sans font-medium text-sm rounded hover:border-[#C9A84C] hover:bg-[#C9A84C]/5 transition-colors duration-200"
+                    className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#1C3A2A]/40 text-[#1C3A2A] font-sans font-medium text-sm rounded hover:border-[#1C3A2A] hover:bg-[#1C3A2A]/5 transition-colors duration-200"
                   >
                     Discover STEAM
                   </Link>
@@ -65,10 +65,9 @@ export default function Home() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  {/* Caption strip */}
                   <div className="mt-3 flex items-center justify-between">
-                    <span className="font-sans text-[#F5F0E8]/40 text-xs">Est. London</span>
-                    <span className="font-sans text-[#F5F0E8]/40 text-xs">Madrasah · STEAM</span>
+                    <span className="font-sans text-[#1a1a18]/35 text-xs">Est. London</span>
+                    <span className="font-sans text-[#1a1a18]/35 text-xs">Madrasah · STEAM</span>
                   </div>
                 </div>
               </div>
@@ -81,7 +80,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-5 flex items-center justify-end">
           <button
             onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-            className="flex items-center gap-2 text-[#F5F0E8]/40 hover:text-[#C9A84C] transition-colors duration-200 scroll-indicator"
+            className="flex items-center gap-2 text-[#1C3A2A]/35 hover:text-[#1C3A2A] transition-colors duration-200 scroll-indicator"
             aria-label="Scroll down"
           >
             <ArrowDown size={16} />
@@ -90,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* ── What We Offer ─────────────────────────────────────────── */}
-      <section className="bg-[#111f17] py-24">
+      <section className="bg-[#EBE5D9] py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
           <ScrollReveal>
@@ -109,21 +108,21 @@ export default function Home() {
               </div>
               <Link
                 to="/about"
-                className="font-sans text-[#C9A84C] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 self-end"
+                className="font-sans text-[#1C3A2A] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 self-end"
               >
                 About us <ArrowRight size={14} />
               </Link>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#C9A84C]/15">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1C3A2A]/12">
 
             {/* Madrasah */}
             <ScrollReveal>
-              <Link to="/madrasah" className="group block bg-[#111f17] p-10 md:p-12 hover:bg-[#1a2d22] transition-colors duration-200 h-full">
+              <Link to="/madrasah" className="group block bg-[#EBE5D9] p-10 md:p-12 hover:bg-[#E2DAC9] transition-colors duration-200 h-full">
                 <div className="flex items-start justify-between mb-8">
-                  <BookOpen size={22} className="text-[#C9A84C] mt-1" />
-                  <span className="font-sans text-[#D4E84A] text-xs font-semibold px-3 py-1 border border-[#D4E84A]/40 rounded-sm">
+                  <BookOpen size={22} className="text-[#1C3A2A] mt-1" />
+                  <span className="font-sans text-[#1C3A2A] text-xs font-semibold px-3 py-1 border border-[#1C3A2A]/30 rounded-sm bg-[#D4E84A]">
                     Thursday · 5–7pm
                   </span>
                 </div>
@@ -133,10 +132,10 @@ export default function Home() {
                 >
                   Olive Education<br />Madrasah
                 </h3>
-                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8">
+                <p className="font-sans text-[#1a1a18]/60 text-sm leading-relaxed mb-8">
                   A safe and nurturing space where children learn Qaa'idah, Qur'an, Islamic Studies, Seerah and more — every Thursday during term time.
                 </p>
-                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                <span className="font-sans text-[#1C3A2A] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
                   Learn more <ArrowRight size={14} />
                 </span>
               </Link>
@@ -144,10 +143,10 @@ export default function Home() {
 
             {/* STEAM */}
             <ScrollReveal delay={100}>
-              <Link to="/steam" className="group block bg-[#111f17] p-10 md:p-12 hover:bg-[#1a2d22] transition-colors duration-200 h-full">
+              <Link to="/steam" className="group block bg-[#EBE5D9] p-10 md:p-12 hover:bg-[#E2DAC9] transition-colors duration-200 h-full">
                 <div className="flex items-start justify-between mb-8">
-                  <FlaskConical size={22} className="text-[#C9A84C] mt-1" />
-                  <span className="font-sans text-[#C9A84C] text-xs font-semibold px-3 py-1 border border-[#C9A84C]/30 rounded-sm">
+                  <FlaskConical size={22} className="text-[#1C3A2A] mt-1" />
+                  <span className="font-sans text-[#1C3A2A] text-xs font-semibold px-3 py-1 border border-[#1C3A2A]/25 rounded-sm">
                     Launching soon
                   </span>
                 </div>
@@ -157,10 +156,10 @@ export default function Home() {
                 >
                   STEAM<br />Programme
                 </h3>
-                <p className="font-sans text-[#F5F0E8]/65 text-sm leading-relaxed mb-8">
+                <p className="font-sans text-[#1a1a18]/60 text-sm leading-relaxed mb-8">
                   Our upcoming Science, Technology, Engineering, Arts & Maths programme — designed to inspire curiosity and build future skills in young minds.
                 </p>
-                <span className="font-sans text-[#C9A84C] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                <span className="font-sans text-[#1C3A2A] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
                   Find out more <ArrowRight size={14} />
                 </span>
               </Link>
@@ -171,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* ── Community ─────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#1C3A2A]">
+      <section className="py-24 bg-[#F5F0E8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 gap-x-16">
 
@@ -188,7 +187,7 @@ export default function Home() {
               </blockquote>
               <Link
                 to="/about"
-                className="font-sans text-[#C9A84C] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+                className="font-sans text-[#1C3A2A] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
               >
                 Our story <ArrowRight size={14} />
               </Link>
@@ -196,10 +195,10 @@ export default function Home() {
 
             <ScrollReveal delay={200} className="lg:col-span-7">
               <div className="space-y-6 pt-2 lg:pt-14">
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed">
                   Olive Education was founded on a deep belief that every child deserves access to quality Islamic education in a welcoming, community-driven environment. We work closely with families to ensure our lessons are engaging, age-appropriate, and rooted in strong Islamic values.
                 </p>
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed">
                   Our teachers are qualified, passionate, and dedicated to every child's growth. Whether your child is just beginning their Qur'anic journey or building on existing knowledge, Olive Education is a place where they can thrive.
                 </p>
                 <div className="rule-strong mt-8 pt-8">
@@ -210,8 +209,8 @@ export default function Home() {
                       { label: "Qualified teachers", note: "Every class" },
                     ].map((s) => (
                       <div key={s.label}>
-                        <p className="font-sans text-[#C9A84C] font-medium text-sm mb-1">{s.label}</p>
-                        <p className="font-sans text-[#F5F0E8]/40 text-xs">{s.note}</p>
+                        <p className="font-sans text-[#1C3A2A] font-medium text-sm mb-1">{s.label}</p>
+                        <p className="font-sans text-[#1a1a18]/35 text-xs">{s.note}</p>
                       </div>
                     ))}
                   </div>
@@ -224,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────────── */}
-      <section className="geo-texture py-24 bg-[#1C3A2A]">
+      <section className="geo-texture py-24 bg-[#EBE5D9]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <ScrollReveal>
             <div className="max-w-2xl">
@@ -238,25 +237,25 @@ export default function Home() {
               >
                 Ready to join our community?
               </h2>
-              <p className="font-sans text-[#F5F0E8]/65 text-base leading-relaxed mb-3">
-                Madrasah runs every Thursday, 5–7pm, during term time. Based in <span className="text-[#F5F0E8]/90">Pimlico, London</span> — contact us to register your child.
+              <p className="font-sans text-[#1a1a18]/65 text-base leading-relaxed mb-3">
+                Madrasah runs every Thursday, 5–7pm, during term time. Based in <span className="text-[#1a1a18]/90 font-medium">Pimlico, London</span> — contact us to register your child.
               </p>
               <p className="font-sans text-sm mb-10">
-                <a href="tel:+447723383465" className="text-[#C9A84C] hover:underline">+44 7723 383 465</a>
-                <span className="text-[#F5F0E8]/30 mx-3">·</span>
-                <a href="mailto:oliveeducation@mail.com" className="text-[#C9A84C] hover:underline">oliveeducation@mail.com</a>
+                <a href="tel:+447723383465" className="text-[#1C3A2A] hover:underline">+44 7723 383 465</a>
+                <span className="text-[#1a1a18]/25 mx-3">·</span>
+                <a href="mailto:oliveeducation@mail.com" className="text-[#1C3A2A] hover:underline">oliveeducation@mail.com</a>
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#1C3A2A] text-[#F5F0E8] font-sans font-semibold text-sm rounded hover:bg-[#254D38] transition-colors duration-200"
                 >
                   Register Now
                   <ArrowRight size={15} />
                 </Link>
                 <Link
                   to="/madrasah"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#C9A84C]/50 text-[#C9A84C] font-sans font-medium text-sm rounded hover:border-[#C9A84C] transition-colors duration-200"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-[#1C3A2A]/40 text-[#1C3A2A] font-sans font-medium text-sm rounded hover:border-[#1C3A2A] transition-colors duration-200"
                 >
                   View Schedule
                 </Link>

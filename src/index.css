@@ -12,6 +12,9 @@
   --color-gold:         #C9A84C;
   --color-gold-light:   #E8C96A;
   --color-cream:        #F5F0E8;
+  --color-cream-mid:    #EBE5D9;
+  --color-cream-deep:   #E2DAC9;
+  --color-ink:          #1a1a18;
   --color-lime:         #D4E84A;
 }
 
@@ -19,24 +22,21 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-forest);
+  background-color: var(--color-cream);
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  color: var(--color-cream);
-  background-color: var(--color-forest);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ─── Geometric background texture ─────────────────────────── */
-/*
-  A subtle Islamic-inspired diamond lattice pattern.
-  Culturally specific, not decorative "AI slop".
-*/
+
 .geo-texture {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 2 L78 40 L40 78 L2 40 Z' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.12'/%3E%3Cpath d='M40 20 L60 40 L40 60 L20 40 Z' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.07'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 2 L78 40 L40 78 L2 40 Z' fill='none' stroke='%231C3A2A' stroke-width='0.5' stroke-opacity='0.08'/%3E%3Cpath d='M40 20 L60 40 L40 60 L20 40 Z' fill='none' stroke='%231C3A2A' stroke-width='0.5' stroke-opacity='0.05'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 80px 80px;
 }
@@ -45,23 +45,24 @@ body {
 
 .rule {
   height: 1px;
-  background-color: rgba(201, 168, 76, 0.2);
+  background-color: rgba(28, 58, 42, 0.15);
 }
 
 .rule-strong {
   height: 1px;
-  background-color: rgba(201, 168, 76, 0.35);
+  background-color: rgba(28, 58, 42, 0.25);
 }
 
-/* A small decorative mark — used before section labels */
+/* ─── Section mark ──────────────────────────────────────────── */
+
 .section-mark {
   display: inline-block;
   width: 24px;
   height: 1px;
-  background-color: var(--color-gold);
+  background-color: var(--color-forest);
   vertical-align: middle;
   margin-right: 12px;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 /* ─── ScrollReveal ──────────────────────────────────────────── */
@@ -86,39 +87,26 @@ body {
 
 .label {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.6875rem;   /* 11px */
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  opacity: 0.85;
+  color: var(--color-forest);
+  opacity: 0.7;
 }
 
 .display {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  color: var(--color-gold);
+  color: var(--color-forest);
   line-height: 1.05;
-}
-
-/* ─── Cards ─────────────────────────────────────────────────── */
-
-.card {
-  background-color: var(--color-forest-mid);
-  border: 1px solid rgba(201, 168, 76, 0.12);
-  border-radius: 4px;
-  transition: border-color 0.25s ease;
-}
-
-.card:hover {
-  border-color: rgba(201, 168, 76, 0.3);
 }
 
 /* ─── Scroll indicator ──────────────────────────────────────── */
 
 @keyframes scroll-pulse {
-  0%, 100% { opacity: 0.4; transform: translateY(0); }
-  50%       { opacity: 0.8; transform: translateY(5px); }
+  0%, 100% { opacity: 0.35; transform: translateY(0); }
+  50%       { opacity: 0.7;  transform: translateY(5px); }
 }
 
 .scroll-indicator {
@@ -128,5 +116,5 @@ body {
 /* ─── Scrollbar ─────────────────────────────────────────────── */
 
 ::-webkit-scrollbar       { width: 5px; }
-::-webkit-scrollbar-track { background: #1C3A2A; }
-::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.4); border-radius: 2px; }
+::-webkit-scrollbar-track { background: #F5F0E8; }
+::-webkit-scrollbar-thumb { background: rgba(28, 58, 42, 0.3); border-radius: 2px; }

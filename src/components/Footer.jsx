@@ -11,7 +11,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111f17]">
+    <footer className="bg-[#E2DAC9]">
       <div className="rule" />
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
@@ -24,24 +24,24 @@ export default function Footer() {
                 alt="Olive Education"
                 className="h-10 w-10 rounded object-contain"
               />
-              <span className="font-sans text-[#C9A84C] font-semibold text-xs uppercase tracking-[0.15em]">
+              <span className="font-sans text-[#1C3A2A] font-semibold text-xs uppercase tracking-[0.15em]">
                 Olive Education
               </span>
             </Link>
             <p
-              className="font-display italic text-[#E8C96A] text-lg leading-snug"
+              className="font-display italic text-[#1C3A2A] text-lg leading-snug"
               style={{ fontFamily: '"Cormorant Garamond", serif' }}
             >
               "Empowering Minds,<br />Inspiring Futures"
             </p>
-            <p className="font-sans text-[#F5F0E8]/45 text-sm leading-relaxed">
+            <p className="font-sans text-[#1a1a18]/55 text-sm leading-relaxed">
               A community-led Islamic educational organisation in London, nurturing the next generation through faith, knowledge and curiosity.
             </p>
           </div>
 
           {/* Col 2: Quick Links */}
           <div>
-            <h3 className="font-sans font-semibold text-[#F5F0E8]/35 uppercase tracking-widest text-xs mb-6">
+            <h3 className="font-sans font-semibold text-[#1C3A2A]/40 uppercase tracking-widest text-xs mb-6">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -49,7 +49,7 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="font-sans text-[#F5F0E8]/60 hover:text-[#C9A84C] text-sm transition-colors duration-200"
+                    className="font-sans text-[#1a1a18]/60 hover:text-[#1C3A2A] text-sm transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
 
           {/* Col 3: Contact */}
           <div>
-            <h3 className="font-sans font-semibold text-[#F5F0E8]/35 uppercase tracking-widest text-xs mb-6">
+            <h3 className="font-sans font-semibold text-[#1C3A2A]/40 uppercase tracking-widest text-xs mb-6">
               Contact
             </h3>
             <ul className="space-y-4">
@@ -73,15 +73,15 @@ export default function Footer() {
                   <a
                     href={item.href}
                     {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="flex items-center gap-3 text-[#F5F0E8]/60 hover:text-[#C9A84C] font-sans text-sm transition-colors duration-200"
+                    className="flex items-center gap-3 text-[#1a1a18]/60 hover:text-[#1C3A2A] font-sans text-sm transition-colors duration-200"
                   >
-                    <span className="text-[#C9A84C]/60">{item.icon}</span>
+                    <span className="text-[#1C3A2A]/50">{item.icon}</span>
                     {item.value}
                   </a>
                 </li>
               ))}
-              <li className="flex items-start gap-3 text-[#F5F0E8]/35 font-sans text-xs pt-1 leading-relaxed">
-                <MapPin size={13} className="text-[#C9A84C]/40 flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-3 text-[#1a1a18]/40 font-sans text-xs pt-1 leading-relaxed">
+                <MapPin size={13} className="text-[#1C3A2A]/40 flex-shrink-0 mt-0.5" />
                 Lillington Gardens, Community Hall,<br />Vauxhall Bridge Road, London, SW1V 2LF
               </li>
             </ul>
@@ -92,10 +92,10 @@ export default function Footer() {
 
       <div className="rule" />
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="font-sans text-[#F5F0E8]/25 text-xs">
+        <p className="font-sans text-[#1a1a18]/30 text-xs">
           © 2026 Olive Education. All rights reserved.
         </p>
-        <p className="font-sans text-[#F5F0E8]/20 text-xs">London, UK</p>
+        <p className="font-sans text-[#1a1a18]/20 text-xs">London, UK</p>
       </div>
     </footer>
   )

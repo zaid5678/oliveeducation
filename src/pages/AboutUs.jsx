@@ -11,10 +11,10 @@ export default function AboutUs() {
   }, [])
 
   return (
-    <div className="bg-[#1C3A2A]">
+    <div className="bg-[#F5F0E8]">
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
-      <section className="geo-texture pt-32 pb-20 bg-[#1C3A2A]">
+      <section className="geo-texture pt-32 pb-20 bg-[#F5F0E8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <p className="label mb-7 flex items-center">
             <span className="section-mark" />
@@ -26,7 +26,7 @@ export default function AboutUs() {
           >
             About Olive Education
           </h1>
-          <p className="font-sans text-[#F5F0E8]/65 text-lg max-w-xl leading-relaxed">
+          <p className="font-sans text-[#1a1a18]/60 text-lg max-w-xl leading-relaxed">
             Rooted in faith. Driven by community. Dedicated to every child's potential.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── Mission ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#111f17]">
+      <section className="py-24 bg-[#EBE5D9]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 gap-x-16 items-start">
 
@@ -51,7 +51,7 @@ export default function AboutUs() {
               </h2>
               <Link
                 to="/madrasah"
-                className="font-sans text-[#C9A84C] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 mt-8"
+                className="font-sans text-[#1C3A2A] text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200 mt-8"
               >
                 Explore our Madrasah <ArrowRight size={14} />
               </Link>
@@ -59,10 +59,10 @@ export default function AboutUs() {
 
             <ScrollReveal delay={150} className="lg:col-span-7">
               <div className="space-y-5 lg:pt-20">
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed">
                   Our school provides a safe and fun learning space where every child is supported to thrive and fulfil their potential. We provide a curriculum that caters to students of all levels and encourage a sense of community where students can practise together, share experiences, and learn from one another.
                 </p>
-                <p className="font-sans text-[#F5F0E8]/75 leading-relaxed">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed">
                   We believe that Islamic education is most powerful when it is joyful, engaging, and embedded in a strong sense of belonging. That is why everything we do is shaped by the needs of our students and the families we serve.
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── Values ────────────────────────────────────────────────── */}
-      <section className="py-24 bg-[#1C3A2A]">
+      <section className="py-24 bg-[#F5F0E8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
           <ScrollReveal>
@@ -89,7 +89,6 @@ export default function AboutUs() {
             </h2>
           </ScrollReveal>
 
-          {/* Horizontal rule list — editorial, not icon cards */}
           <div className="space-y-0">
             {[
               {
@@ -112,7 +111,7 @@ export default function AboutUs() {
                 <div className="rule" />
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 py-8">
                   <div className="md:col-span-1">
-                    <span className="font-sans text-[#C9A84C]/40 text-xs font-medium">{val.n}</span>
+                    <span className="font-sans text-[#1C3A2A]/35 text-xs font-medium">{val.n}</span>
                   </div>
                   <div className="md:col-span-4">
                     <h3
@@ -123,7 +122,7 @@ export default function AboutUs() {
                     </h3>
                   </div>
                   <div className="md:col-span-7">
-                    <p className="font-sans text-[#F5F0E8]/65 leading-relaxed text-sm md:text-base">
+                    <p className="font-sans text-[#1a1a18]/60 leading-relaxed text-sm md:text-base">
                       {val.body}
                     </p>
                   </div>
@@ -137,7 +136,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── Story / Editorial ─────────────────────────────────────── */}
-      <section className="py-24 bg-[#111f17]">
+      <section className="py-24 bg-[#EBE5D9]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10">
 
@@ -156,13 +155,13 @@ export default function AboutUs() {
 
             <ScrollReveal delay={150} className="lg:col-span-5 lg:col-start-7">
               <div className="space-y-5 lg:pt-16">
-                <p className="font-sans text-[#F5F0E8]/70 leading-relaxed text-sm">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed text-sm">
                   Founded by families in the local community, Olive Education grew from a simple desire: to create an Islamic learning environment that children actually look forward to attending. Too often, madrasah is seen as a chore — we set out to change that.
                 </p>
-                <p className="font-sans text-[#F5F0E8]/70 leading-relaxed text-sm">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed text-sm">
                   Our teachers bring warmth, qualification, and genuine care to every session. Lessons are interactive and engaging, drawing on classical Islamic scholarship while remaining relevant to children growing up in London today.
                 </p>
-                <p className="font-sans text-[#F5F0E8]/70 leading-relaxed text-sm">
+                <p className="font-sans text-[#1a1a18]/65 leading-relaxed text-sm">
                   We are a grassroots organisation — funded by and accountable to the community we serve. Every decision we make is guided by one question: what is best for our children?
                 </p>
               </div>
@@ -173,7 +172,7 @@ export default function AboutUs() {
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────────── */}
-      <section className="geo-texture py-20 bg-[#1C3A2A]">
+      <section className="geo-texture py-20 bg-[#F5F0E8]">
         <div className="rule" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
           <ScrollReveal>
@@ -185,13 +184,13 @@ export default function AboutUs() {
                 >
                   Come and meet us
                 </h2>
-                <p className="font-sans text-[#F5F0E8]/60 text-sm max-w-md leading-relaxed">
+                <p className="font-sans text-[#1a1a18]/55 text-sm max-w-md leading-relaxed">
                   We'd love to welcome your family into the Olive Education community. Get in touch to learn more or arrange a visit.
                 </p>
               </div>
               <Link
                 to="/contact"
-                className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#C9A84C] text-[#1C3A2A] font-sans font-semibold text-sm rounded hover:bg-[#E8C96A] transition-colors duration-200"
+                className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#1C3A2A] text-[#F5F0E8] font-sans font-semibold text-sm rounded hover:bg-[#254D38] transition-colors duration-200"
               >
                 Get In Touch
                 <ArrowRight size={15} />
