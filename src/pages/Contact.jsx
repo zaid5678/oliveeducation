@@ -94,7 +94,7 @@ export default function Contact() {
           </div>
 
           {/* Session note */}
-          <div className="border border-[#1C3A2A]/20 rounded px-6 py-4 bg-[#D4E84A]">
+          <div className="border border-[#C9A84C]/60 rounded px-6 py-4 bg-[#C9A84C]">
             <p className="font-sans text-[#1C3A2A] text-sm font-medium">
               Madrasah runs every Thursday, 5–7pm during term time at Lillington Gardens, Community Hall, Vauxhall.
             </p>
