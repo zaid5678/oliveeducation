@@ -23,7 +23,7 @@ export default function Home() {
               <div className="lg:col-span-7">
                 <p className="label mb-8 flex items-center">
                   <span className="section-mark" />
-                  Islamic Education · Pimlico, London
+                  Two Pillars of Learning · Pimlico, London
                 </p>
 
                 <h1
